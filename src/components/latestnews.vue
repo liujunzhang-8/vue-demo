@@ -8,6 +8,44 @@
         <img src="../assets/img/LearnMore01.png" alt="" />
       </div>
     </div>
+    <div class="content">
+      <div class="content_left">
+        <div>
+          <img src="../assets/img/lertestNews01.png" alt="" class="pic">
+          <img src="../assets/img/Vector.png" alt="" class="vector">
+          <img src="../assets/img/Vector 321.png" alt="" class="pic">
+        </div>
+        <div>
+          <img src="../assets/img/letestNews02.png" alt="" style="margin-top:18px" class="pic">
+          <img src="../assets/img/Vector.png" alt="" class="vector">
+          <img src="../assets/img/Vector 321.png" alt="" class="pic">
+        </div>
+        <div>
+          <img src="../assets/img/letestNews03.png" alt="" style="margin-top:18px" class="pic">
+          <img src="../assets/img/Vector.png" alt="" class="vector" style="margin-top:18px">
+          <!-- <img src="../assets/img/Vector 321.png" alt="" class="pic"> -->
+          <div style="height:18px"></div>
+        </div>
+      </div>
+      <div class="content_right">
+        <div>
+          <img src="../assets/img/letestNews04.png" alt="" class="pic">
+          <img src="../assets/img/Vector.png" alt="" class="vector">
+          <img src="../assets/img/Vector 321.png" alt="" class="pic">
+        </div>
+        <div>
+          <img src="../assets/img/letestNews05.png" alt="" style="margin-top:18px" class="pic">
+          <img src="../assets/img/Vector.png" alt="" class="vector">
+          <img src="../assets/img/Vector 321.png" alt="" class="pic">
+        </div>
+        <div>
+          <img src="../assets/img/letestNews06.png" alt="" style="margin-top:18px" class="pic">
+          <img src="../assets/img/Vector.png" alt="" class="vector">
+          <!-- <img src="../assets/img/Vector 321.png" alt="" class="pic"> -->
+          <div style="height:18px"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -60,6 +98,50 @@ export default {
     }
     .learnMore:hover {
       transform: scale(1.1);
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    .content_left {
+      width: 48%;
+      div {
+        width: 818px;
+        position: relative;
+        .pic {
+          width: 100%;
+        }
+        .vector {
+          cursor: pointer;
+          width: 33px;
+          position: absolute;
+          bottom: 30px;
+          left: 360px;
+        }
+        .vector:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .content_right {
+      width: 48%;
+      div {
+        width: 818px;
+        position: relative;
+        .pic {
+          width: 100%;
+        }
+        .vector {
+          cursor: pointer;
+          width: 33px;
+          position: absolute;
+          bottom: 30px;
+          left: 360px;
+        }
+        .vector:hover {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }
