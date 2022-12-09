@@ -11,9 +11,9 @@
     "@achrinza/node-ipc": "^10.1.7",
     "core-js": "^3.6.5",
     "less-loader": "5.0.0",
-    "swiper": "^7.0.8",
+    "swiper": "^8.4.5",
     "vue": "^2.6.11",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue-awesome-swiper": "3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
