@@ -9,10 +9,10 @@
         :style="`background: url(${item.imgUrl}) no-repeat center; background-size: 100% 100%`"
         @mouseenter="onStop" @mouseleave="onStart">
         <!-- <a :href="item.link" target="_blank"></a> -->
-        <img src="../assets/img/topSearch.png" alt="" style="width: calc(100% - 92px); padding: 38px 20px 0 72px;">
+        <img src="../assets/img/topSearch.png" alt="" style="width: calc(100% - 92px); padding: 38px 20px 0 72px;" v-if="nodeType === '01'">
       </div>
     </div>
-    <div class="m-banner-learnMore" @click="learnMore">
+    <div class="m-banner-learnMore" @click="learnMore" v-if="nodeType === '01'">
       <img src="../assets/img/learnMore.png" alt="">
       <img src="../assets/img/arrow.png" alt="" :class="['arrow', {activeArrow: changeArrow}]">
     </div>
@@ -43,6 +43,9 @@ export default {
     height: { // 高度
       type: String,
       default: '600px'
+    },
+    nodeType: {
+      type: String
     }
   },
   data () {
