@@ -108,7 +108,7 @@ export default {
     });
     setTimeout(() => {
       this.onStart()
-    }, 0)
+    }, 1000)
     window.onfocus = () => { // 页面激活
       this.onStart()
     }
@@ -121,14 +121,14 @@ export default {
     onStart () {
       clearInterval(this.timer)
       if (this.banner.length > 1) {
-        this.timer = setInterval(this.onMove, 2000)
+        this.timer = setInterval(this.onMove, 3000)
       }
     },
     onStop () {
-      clearInterval(this.timer)
+      clearInterval(3000)
     },
     onEnter (index) {
-      clearInterval(this.timer)
+      clearInterval(3000)
       this.activeIndex = index
       this.onStart()
     },
