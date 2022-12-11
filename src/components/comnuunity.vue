@@ -18,9 +18,10 @@
               :key="index"
             >
               <img :src="item.picture_path" alt="" />
+              <img :src="item.icon_path" alt="" class="icon_btn" @click="changeIcon(index)" />
+              <img :src="item.arrow_path" alt="" :class="['smallArrow', {changeIcon: index === bannerIndex ? changeArrow : ''}]">
             </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
         <div class="m-dot-list" v-if="banner.length > 1">
           <div
@@ -56,27 +57,43 @@ export default {
       banner: [
         {
           picture_path: require("../assets/img/communityPic01.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic02.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic03.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic04.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic05.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic06.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic07.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
         {
           picture_path: require("../assets/img/communityPic08.png"),
+          icon_path: require("../assets/img/join.png"),
+          arrow_path: require("../assets/img/smallArrow.png")
         },
       ],
     };
@@ -118,6 +135,11 @@ export default {
   },
 
   methods: {
+    changeIcon(index) {
+      this.bannerIndex = index
+      this.changeArrow = !this.changeArrow
+      console.log(this.changeArrow, '到底有没有变化');
+    },
     onStart () {
       clearInterval(this.timer)
       if (this.banner.length > 1) {
@@ -200,6 +222,7 @@ export default {
     height: 100%;
   }
   .swiper3 .swiper-wrapper .swiper-slide {
+    position: relative;
     width: 400px !important;
     overflow: hidden;
     display: flex;
@@ -210,6 +233,24 @@ export default {
     width: 100%;
     height: 564px;
     border-radius: 5px;
+  }
+  .swiper3 .swiper-wrapper .swiper-slide .icon_btn {
+    position: absolute;
+    width: 102px;
+    height: 42px;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+  .swiper3 .swiper-wrapper .swiper-slide .smallArrow {
+    position: absolute;
+    width: 18px;
+    height: 10px;
+    left: 85px;
+    bottom: 36px;
+  }
+  .swiper3 .swiper-wrapper .swiper-slide .changeIcon {
+    transform: scale(1.3);
   }
   .swiper3 .swiper-wrapper .swiper-slide-prev,
   .swiper3 .swiper-wrapper .swiper-slide-next {
